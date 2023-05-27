@@ -26,7 +26,7 @@ const Modal: React.FC<ModalProps> = ({
   body,
   actionLabel,
   footer,
-  disabled,
+  disabled = false,
   secondaryAction,
   secondaryActionLabel,
 }) => {
@@ -86,14 +86,14 @@ const Modal: React.FC<ModalProps> = ({
       >
         <div
           className="
-          relative 
+          relative
           w-full
           md:w-4/6
           lg:w-3/6
           xl:w-2/5
           my-6
           mx-auto 
-          h-full 
+          h-full
           lg:h-auto
           md:h-auto
           "
