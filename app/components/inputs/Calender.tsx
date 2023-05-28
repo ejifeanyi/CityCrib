@@ -7,7 +7,7 @@ import 'react-date-range/dist/theme/default.css';
 interface CalenderProps {
   value: Range;
   onChange: (value: RangeKeyDict) => void;
-  disabledDates: Date[];
+  disabledDates?: Date[];
 }
 
 const Calender: React.FC<CalenderProps> = ({
@@ -17,14 +17,14 @@ const Calender: React.FC<CalenderProps> = ({
 }) => {
   return (
     <DateRange
-    rangeColors={['#262626']}
-    ranges={[value]}
-    date={new Date()}
-    onChange={onChange}
-    direction='vertical'
-    showDateDisplay={false}
-    minDate={new Date()}
-    disabledDates={disabledDates}
+      rangeColors={['#262626']}
+      ranges={[value]}
+      date={new Date()}
+      onChange={onChange}
+      direction="vertical"
+      showDateDisplay={false}
+      minDate={new Date()}
+      disabledDates={disabledDates}
     />
   );
 };
