@@ -11,8 +11,9 @@ import RentModal from './components/modals/RentModal';
 import SearchModal from './components/modals/SearchModal';
 
 export const metadata = {
-  title: 'Homely',
-  description: 'Homely app',
+  title: 'CityCrib',
+  description:
+    'Product that helps you find apartment to rent and also lets you rent out your own apartment with ease',
 };
 
 const font = Nunito({
@@ -27,7 +28,7 @@ export default async function RootLayout({
   const currentUser = await getCurrentUser();
   return (
     <html lang="en">
-      <body className="{font-className}">
+      <body className="{font.className}">
         <ClientOnly>
           <ToasterProvider />
           <SearchModal />
