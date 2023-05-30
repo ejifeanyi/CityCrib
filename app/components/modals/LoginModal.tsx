@@ -78,18 +78,35 @@ const LoginModal = () => {
         errors={errors}
         required
       />
+      <div 
+        className="
+          text-neutral-500 
+          text-center 
+          mt-4 
+          font-light
+        "
+      >
+        <p>If you are testing the app, Use this email and password to login - 
+          <span 
+            className="
+              text-red-300
+              cursor-pointer
+            "
+            >experimentalemail8@gmail.com | experimentalemail8</span>
+        </p>
+      </div>
     </div>
   );
 
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
-      <Button
+      {/* <Button
         outline
         label="Continue with Google"
         icon={FcGoogle}
         onClick={() => signIn('google')}
-      />
+      /> */}
       <Button
         outline
         label="Continue with Github"
